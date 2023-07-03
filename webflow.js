@@ -17572,7 +17572,7 @@
   // node_modules/core-js/internals/whitespaces.js
   var require_whitespaces = __commonJS({
     "node_modules/core-js/internals/whitespaces.js"(exports, module) {
-      module.exports = "	\n\v\f\r \xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF";
+      module.exports = "  \n\v\f\r \xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF";
     }
   });
 
@@ -20214,7 +20214,7 @@
       }
       function printBlockString(value, isDescription) {
         var escaped = value.replace(/"""/g, '\\"""');
-        return (value[0] === " " || value[0] === "	") && value.indexOf("\n") === -1 ? '"""' + escaped.replace(/"$/, '"\n') + '"""' : '"""\n' + (isDescription ? escaped : indent(escaped)) + '\n"""';
+        return (value[0] === " " || value[0] === "  ") && value.indexOf("\n") === -1 ? '"""' + escaped.replace(/"$/, '"\n') + '"""' : '"""\n' + (isDescription ? escaped : indent(escaped)) + '\n"""';
       }
     }
   });
@@ -35792,7 +35792,7 @@
       }
       function leadingWhitespace(str) {
         var i = 0;
-        while (i < str.length && (str[i] === " " || str[i] === "	")) {
+        while (i < str.length && (str[i] === " " || str[i] === "  ")) {
           i++;
         }
         return i;
@@ -36157,7 +36157,7 @@
                 value += "\r";
                 break;
               case 116:
-                value += "	";
+                value += "  ";
                 break;
               case 117:
                 var charCode = uniCharCode(charCodeAt.call(body, position + 1), charCodeAt.call(body, position + 2), charCodeAt.call(body, position + 3), charCodeAt.call(body, position + 4));
